@@ -19,7 +19,7 @@ const firestore = firebase.firestore();
 const servers = {
   iceServers: [
     {
-      urls: ['stun:stun1.l.google.com:19302', 'stun:stun2.l.google.com:19302'],
+      urls: ["stun:stun1.l.google.com:19302", "stun:stun2.l.google.com:19302"],
     },
   ],
   iceCandidatePoolSize: 10,
@@ -29,13 +29,27 @@ let pc = new RTCPeerConnection(servers);
 let localStream = null;
 let remoteStream = null;
 // HTML elements
-const webcamButton: any = document.getElementById("webcamButton");
-const webcamVideo: any = document.getElementById("webcamVideo");
-const callButton: any = document.getElementById("callButton");
-const callInput: any = document.getElementById("callInput");
-const answerButton: any = document.getElementById("answerButton");
-const remoteVideo: any = document.getElementById("remoteVideo");
-const hangupButton: any = document.getElementById("hangupButton");
+const webcamButton: HTMLButtonElement = document.getElementById(
+  "webcamButton"
+) as HTMLButtonElement;
+const webcamVideo: HTMLVideoElement = document.getElementById(
+  "webcamVideo"
+) as HTMLVideoElement;
+const callButton: HTMLButtonElement = document.getElementById(
+  "callButton"
+) as HTMLButtonElement;
+const callInput: HTMLButtonElement = document.getElementById(
+  "callInput"
+) as HTMLButtonElement;
+const answerButton: HTMLButtonElement = document.getElementById(
+  "answerButton"
+) as HTMLButtonElement;
+const remoteVideo: HTMLVideoElement = document.getElementById(
+  "remoteVideo"
+) as HTMLVideoElement;
+const hangupButton: HTMLButtonElement = document.getElementById(
+  "hangupButton"
+) as HTMLButtonElement;
 
 // 1. Setup media sources
 
